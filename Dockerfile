@@ -9,4 +9,5 @@ RUN pip3 install -U pip && pip3 install -U -r requirements.txt
 RUN mkdir /LazyPrincess
 WORKDIR /LazyPrincess
 COPY start.sh /start.sh
+RUN sed -i 's/\r$//' /start.sh
 CMD ["/bin/bash", "/start.sh"]
